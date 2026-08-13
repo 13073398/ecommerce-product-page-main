@@ -5,7 +5,7 @@
 }
 
 body{
-   font-family: "Akaya Kanadaka", system-ui;
+   /* font-family: "Akaya Kanadaka", system-ui; */
    font-weight: 400;
    font-style: normal;
 }
@@ -19,5 +19,280 @@ body{
     --white: hsl(0, 0%, 100%);
     --black: rgba(0, 0, 0, 0.75);
     --Main_font:16px;
+    --margin_section:50px;
+    --main_padding:15px;
 
 }
+
+body{
+    background-color: var(--white);
+}
+/* Start nav_bar */
+.main_menue{
+    
+     padding: 30px;
+}
+.main_menue .main_menue_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+@media(max-width:768px){
+     .main_menue {
+        display: flex;
+        justify-content: center;
+      
+     }
+}
+.main_menue .main_menue_container .icon a{
+   text-align: center;
+    padding: 0 !important;
+    font-size: 30px !important;
+}
+@media(max-width:768px){
+    .main_menue .main_menue_container .icon a{
+        font-size: 15px !important;
+        margin-left: 15px;
+    }
+}
+.main_menue .main_menue_container .icon a{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.main_menue .main_menue_container::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--grayish-blue);
+    width: 100%;
+    bottom: -32px;
+    left: 0;
+}
+.main_menue .main_menue_details ul li{
+    cursor: pointer;
+    position: relative;
+}
+.main_menue .main_menue_details ul li:hover{
+    color: var(--black);
+}
+.main_menue .main_menue_details ul li:hover::after{
+    width: 80%;
+    transition: all .5s;
+}
+.main_menue .main_menue_details ul li::after{
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid orange;
+    width: 0%;
+    bottom: -9px;
+}
+.main_menue .main_menue_container .image{
+
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.main_menue .main_menue_container .image img{
+    cursor: pointer;
+}
+.main_menue .main_menue_container .image img:nth-child(2){
+ width: 30px;
+ margin-left: 20px;
+}
+/* End nav_bar */
+/* start hero section */
+.hero_section .container{
+ margin-top: var(--margin_section);
+ padding: var(--main_padding);
+ display: flex;
+ flex-direction: row-reverse;
+ align-items: center;
+ justify-content:space-between;
+
+}
+.hero_section .right{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction:column;
+
+}
+.hero_section .left{
+     flex-basis: 50%;
+    
+     padding: 10px 0px;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center    ;
+}
+.hero_section .left .top_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_section .left .top_section img{
+    
+    width:60%;
+    border-radius: 8px;
+  
+}
+.hero_section .left .bottom_section{
+
+width: 60%;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ margin-top:10px;
+
+}
+.hero_section .left .bottom_section img{
+    width: 22%;
+    margin-left:3%;
+    border-radius: 8px;
+    cursor: pointer;
+  
+   
+}
+
+/* Base Typography */
+body {
+  font-family: 'Kumbh Sans', sans-serif; /* Standard font for Frontend Mentor designs */
+  color: #68707d; /* Muted gray text color */
+}
+
+/* Right Section Container */
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 450px;
+}
+
+/* Sub-header (Company Name) */
+.right header p {
+  color: #ff7d1a; /* Orange accent */
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Main Title */
+.right header h1 {
+  color: #1d2025; /* Dark main header text */
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+/* Description Text */
+.right > p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+/* --- Pricing Section --- */
+.right > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.right > div:nth-of-type(1) > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Current Price ($125.00) */
+.right strong {
+  font-size: 1.75rem;
+  color: #1d2025;
+  font-weight: 700;
+}
+
+/* Discount Badge (50%) */
+.right span:not(:has(button)) {
+  background-color: #ffefe2;
+  color: #ff7d1a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Original Struck-through Price ($250.00) */
+.right del {
+  color: #b6bcc8;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* --- Product Actions Section --- */
+.right > div:nth-of-type(2) {
+  display: flex;
+  gap: 16px;
+}
+
+/* Quantity Picker Box */
+.right > div:nth-of-type(2) > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f8fd;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 140px;
+}
+
+.right > div:nth-of-type(2) > div button {
+  background: none;
+  border: none;
+  color: #ff7d1a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.right > div:nth-of-type(2) > div button:hover {
+  opacity: 0.6;
+}
+
+.right > div:nth-of-type(2) > div span {
+  font-weight: 700;
+  color: #1d2025;
+}
+
+/* Add to Cart Button */
+.right > div:nth-of-type(2) > button {
+  flex: 1;
+  background-color: #ff7d1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0px 20px 30px -10px rgba(255, 125, 26, 0.35);
+  transition: background-color 0.2s ease;
+}
+
+.right > div:nth-of-type(2) > button:hover {
+  background-color: #ff9e52;
+}
+
+.right > div:nth-of-type(2) > button svg path {
+  fill: #ffffff;
+}
+/* end hero section */
