@@ -7,25 +7,64 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Cairo:wght@200..1000&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
    <link rel="stylesheet" href="all.min.css">
   <link rel="stylesheet" href="all.css">
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <!-- Start lay_out_cover -->
+  <div class="deactivate">
+    <div class="close"><button>X</button></div>
+    <div class="image" >
+      <div class="right_arrow"><i class="fa-solid fa-angle-right"></i></div>
+      <img src="./images/image-product-1.jpg" alt="image">
+      <div class="left_arrow"><i class="fa-solid fa-angle-left"></i></div>
+    </div>
+      <div class="bottom_section">
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+        </div>
+  </div>
+  <!-- End lay_out_cover -->
+  <!-- Start cart_box -->
+   <div class="cart_box deactivate">
+    <div class="title"><h5>Cart</h5></div>
+     <div class="empty deactivate">
+      <h5>Your cart is empty</h5>
+    </div>
+    <div class="datails">
+      <div class="image"><img src="./images/image-product-1.jpg" alt="image"></div>
+      <div class="text"> 
+        <div class="left">
+          <p>Fall Limited Edition Sneakers</p>
+          <div div class="calculate">
+          <span>$125,00 *</span>
+          <span>3</span>
+          <span>$375,00</span>
+        </div>
+        </div>
+          <div class="icon"><img src="./images/icon-delete.svg" alt="image"></div>
+      </div>
+    </div>
+    <div class="checkout">
+        <button type="button">
+                 
+                  checkout
+              </button>
+    </div>
+   
+   </div>
+  <!-- End cart_box -->
   <!-- Start navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary main_menue">
         <div class="container">
           <div class="container-fluid  main_menue_container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="border: none; margin-left: 10px;">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="icon"><a class="navbar-brand" href="#">sneakers</a></div>
@@ -47,8 +86,8 @@
                 </ul>
             </div>
             <div class="image">
-              <img src="./images/icon-cart.svg" alt="image">
-              <img src="./images/image-avatar.png" alt="image">
+              <div class="cart"><img src="./images/icon-cart.svg" alt="image"></div>
+              <div class="avatar"><img src="./images/image-avatar.png" alt="image"></div>
             </div>
 
           </div>
@@ -56,10 +95,9 @@
         
 </nav>
   <!-- End navbar -->
-   <!-- Start hero sectiom -->
-
+   <!-- Start hero section -->
 <div class="hero_section">
-  <div class="container">
+  
     <div class="right">
             <header>
               <p>SNEAKER COMPANY</p>
@@ -72,54 +110,52 @@
               the weather can offer.
           </p>
 
-          <!-- Pricing Information -->
-          <div>
+       
+        <div>
               <div>
                   <strong>$125.00</strong>
-                  <span>50%</span>
+                  <span style="color: white; background-color: black;">50%</span>
               </div>
               <del>$250.00</del>
-          </div>
+          </div> 
 
-          <!-- Product Actions -->
+       
           <div>
-              <!-- Quantity Picker -->
+             
               <div>
                   <button type="button" aria-label="Decrease quantity">-</button>
                   <span>0</span>
                   <button type="button" aria-label="Increase quantity">+</button>
               </div>
 
-              <!-- Add to Cart Button -->
+              
               <button type="button">
-                  <!-- Shopping Cart Icon placeholder -->
+                  
                   <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20.925 3.641H3.862L3.61 2.2C3.528 1.737 3.123 1.4 2.652 1.4H.825C.369 1.4 0 1.769 0 2.225c0 .456.369.825.825.825h1.118l2.1 12.015c.106.606.634 1.05 1.25 1.05h12.518c.616 0 1.144-.444 1.25-1.05l1.64-9.375c.08-.456-.271-.849-.726-.849zM6.125 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="#FFF"/>
                   </svg>
                   Add to cart
               </button>
           </div>
-      </div>
-      <div class="left">
-        <!-- Top Section: Big Image -->
-        <div class="top_section">
-            <img src="./images/image-product-1.jpg" alt="image">
-        </div>
-
-        <!-- Bottom Section: 4 Thumbnail Images -->
-        <div class="bottom_section">
-           <img src="./images/image-product-3-thumbnail.jpg" alt="Sneakers thumbnail 4">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="Sneakers thumbnail 4">
-             <img src="./images/image-product-3-thumbnail.jpg" alt="Sneakers thumbnail 4">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="Sneakers thumbnail 4">
-            
-        </div>
     </div>
-  </div>
-      
-</div>
+      <div class="left">
+        <div class="top_section">
+          <div class="right_arrow"><i class="fa-solid fa-angle-right"></i></div>
+          <img src="./images/image-product-1.jpg" alt="image">
+          <div class="left_arrow"><i class="fa-solid fa-angle-left"></i></div>
+        </div>
 
+        
+        <div class="bottom_section">
+          
+            <div class="cover_image "><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+            <div class="cover_image"><img src="./images/image-product-3-thumbnail.jpg" alt="image"></div>
+        </div>
+    </div>  
+
+</div>
+<!-- end hero section -->
 </body>
-</html>
-</html>
 </html>
